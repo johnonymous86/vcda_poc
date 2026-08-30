@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual College Directory Application Home</title>
+</head>
+<body>
+    <h1>Welcome to the Virtual College Directory Application!
+    </h1>
+    <p>Use the options below to find your way!</p>
+<!--need to add action process-->
+    <form action="/action_">
+        <label for="building">Select a building</label>
+       <select name="building" id="building" onchange="window.location.href=this.value;">
+        <option value="" selected disabled hidden></option>
+        <option value="grayson.html">Grayson Hall</option>
+        <option value="smyth.html">Smyth Hall</option>
+        <option value="galax">Galax Hall</option>
+       </select> 
+    </form>
+
+    <form action="/action_">
+        <label for="department">Select a department</label>
+       <select name="department" id="department" onchange="window.location.href=this.value;">
+        <option value="" selected disabled hidden></option>
+        <option value="grayson.html#it">Information Technology</option>
+        <option value="null">Admissions</option>
+       </select>
+    </form>
+</body>
+</html>
