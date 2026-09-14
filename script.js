@@ -2,6 +2,8 @@ const loginForm = document.getElementById('login-form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const errorBox = document.getElementById('error-box');
+const correctUsername = 'admin';
+const correctPassword = 'this-password-is-longer-than-16-characters';
 
 loginForm.addEventListener('submit', function(event) {
 
@@ -32,10 +34,21 @@ loginForm.addEventListener('submit', function(event) {
     if (errors.length > 0) {
     
         errorBox.innerHTML = errors.join('<br>');
-        
+
     } else {
+    
+        console.log('Front-end verification successful.');
 
-        console.log('Front-end verification successful.')
+        if (usernameValue === correctUsername && passwordValue === correctPassword) 
+            {
+                sessionStorage.setItem('loggedIn', 'true');
+
+                window.location.href = 'dashboard.html'
+            
+            } else {
+            
+                errors.push('Credentials incorrect');    
+            }
+        }
     }
-
-});
+);
