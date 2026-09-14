@@ -13,4 +13,10 @@ The next step in developing this application would involve a more robust search 
 
 ## Update 9/14:
 
-Initial HTML only set up for authentication was successful. Implimented JS logic and created very basic authentication loop that occurs in-browser (obviously, this is about as secure as putting a piece of scotch tape on the gate to a lion's cage). Exploring more robust security options means looking at user persistance via a backend database solution. A free solution that offers a relational Postgres database for yet-to-be-developed directory data storage is [Supabase](https://supabase.com/). I am currently only exploring this solution as a authentication structure but the utility of directory data storage makes it an attractive option. 
+Initial HTML only set up for authentication was successful. Implimented JS logic and created very basic authentication loop that occurs in-browser (obviously, this is about as secure as putting a piece of scotch tape on the gate to a lion's cage). Exploring more robust security options means looking at user persistance via a backend database solution. A free solution that offers a relational Postgres database for yet-to-be-developed directory data storage is [Supabase](https://supabase.com/). I am currently only exploring this solution as a authentication structure but the utility of directory data storage makes it an attractive option.
+
+Also, I have decided to change the name of the application to
+
+#College Compass!
+
+![College Campus](assets/Campus_Compass%20(6).png)
