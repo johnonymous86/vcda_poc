@@ -2,8 +2,8 @@ const loginForm = document.getElementById('login-form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const errorBox = document.getElementById('error-box');
-const correctUsername = 'admin';
-const correctPassword = 'Password123P@ssword';
+const correctUsername = 'admin'; //null on in browser auth
+const correctPassword = 'Password123P@ssword'; //null on in browser auth
 const supabaseClient = supabase.createClient('https://lcyboumcokkwtaihvnox.supabase.co', 'sb_publishable_u6CrbHQYoheiiJjYvgUb4Q_vlT_zyH1')
 
 loginForm.addEventListener('submit', function(event) {
