@@ -4,6 +4,7 @@ const password = document.getElementById('password');
 const errorBox = document.getElementById('error-box');
 const correctUsername = 'admin';
 const correctPassword = 'Password123P@ssword';
+const supabaseClient = supabase.createClient('https://lcyboumcokkwtaihvnox.supabase.co', 'sb_publishable_u6CrbHQYoheiiJjYvgUb4Q_vlT_zyH1')
 
 loginForm.addEventListener('submit', function(event) {
 
