@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Log In </title>
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Use your log in credentials below:</h1>
 
     <div class="login-container">
         <h2>Login</h2>
-        <form action="/login" method="POST">
+        <form id="login-form" action="/login" method="POST">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required autocomplete="username">
@@ -24,5 +25,7 @@
             <button type="submit">Log In</button>
         </form>
     </div>
+    
+    <div id="error-box" class="error-message"></div>
 </body>
 </html>
