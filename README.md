@@ -17,6 +17,6 @@ Initial HTML only set up for authentication was successful. Implimented JS logic
 
 Also, I have decided to change the name of the application to
 
-#Campus Compass!
+# Campus Compass!
 
 ![Campus Compass](assets/Campus_Compass%20(6).png)
