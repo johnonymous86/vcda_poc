@@ -3,7 +3,7 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const errorBox = document.getElementById('error-box');
 const correctUsername = 'admin';
-const correctPassword = 'this-password-is-longer-than-16-characters';
+const correctPassword = 'Password123P@ssword';
 
 loginForm.addEventListener('submit', function(event) {
 
@@ -47,7 +47,7 @@ loginForm.addEventListener('submit', function(event) {
             
             } else {
             
-                errors.push('Credentials incorrect');    
+                errorBox.textContent = 'Credentials Incorrect. You Shall Not Pass.'    
             }
         }
     }
