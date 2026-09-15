@@ -1,25 +1,23 @@
 const loginForm = document.getElementById('login-form');
-const username = document.getElementById('username');
+const email = document.getElementById('email');
 const password = document.getElementById('password');
 const errorBox = document.getElementById('error-box');
-const correctUsername = 'admin'; //null on in browser auth
-const correctPassword = 'Password123P@ssword'; //null on in browser auth
 const supabaseClient = supabase.createClient('https://lcyboumcokkwtaihvnox.supabase.co', 'sb_publishable_u6CrbHQYoheiiJjYvgUb4Q_vlT_zyH1')
 
-loginForm.addEventListener('submit', function(event) {
+loginForm.addEventListener('submit', async function(event) {
 
     event.preventDefault();
 
     errorBox.textContent= '';
     
-    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
 
     let errors = [];
 
-    if (usernameValue === '') {
+    if (emailValue === '') {
         
-        errors.push('Username required for access');
+        errors.push('Email required for access');
     }
 
     if (passwordValue === '') {
@@ -37,19 +35,17 @@ loginForm.addEventListener('submit', function(event) {
         errorBox.innerHTML = errors.join('<br>');
 
     } else {
-    
         console.log('Front-end verification successful.');
-
-        if (usernameValue === correctUsername && passwordValue === correctPassword) 
-            {
-                sessionStorage.setItem('loggedIn', 'true');
-
-                window.location.href = 'dashboard.html'
-            
-            } else {
-            
-                errorBox.textContent = 'Credentials Incorrect. You Shall Not Pass.'    
-            }
+    
+        const { data, error } = await supabaseClient.auth.signInWithPassword({
+            email: emailValue,
+            password: passwordValue
+        });
+    
+        if (error) {
+            errorBox.textContent = 'Invalid login credentials.';
+        } else {
+            window.location.href = "dashboard.html";
         }
     }
-);
+});
