@@ -35,7 +35,7 @@ loginForm.addEventListener('submit', async function(event) {
         errorBox.innerHTML = errors.join('<br>');
 
     } else {
-        console.log('Front-end verification successful.');
+        console.log('Sending:', emailValue, passwordValue);
     
         const { data, error } = await supabaseClient.auth.signInWithPassword({
             email: emailValue,
