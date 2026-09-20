@@ -24,3 +24,4 @@ Also, I have decided to change the name of the application to
 Update 9/19
 
 Successfully connected with Supabase and created user persistance. Still working on making the dashboard secure, which involves coding a seperate JS file for the logic that occurs once the user passes credentials and that page loads. Running into some difficulty with async function but basic user authentication now occurs with Supabase, not in browser and the data is persistant, so I'll take success where I can get it. 
+
