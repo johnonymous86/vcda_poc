@@ -6,7 +6,9 @@
     <title>Smyth Hall | Campus Compass</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="smyth.js" defer></script>
+  </head>
 <body>
    <h1>Smyth Hall | 
     Campus Compass
@@ -19,6 +21,13 @@
       </nav>
       
       <hr>
+
+      <div class="map" style="position: relative;">
+        <img src="assets/smyth.jpg" style="width: 50%;">
+        <div id="marker" style="position: absolute; left: 42%; top: 61%;"></div>
+      </div>
+
+      <ul id="room-list"></ul>
       
       <h2 id="floor1">Floor 1</h2>
       
